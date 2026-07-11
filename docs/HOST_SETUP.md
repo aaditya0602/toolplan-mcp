@@ -21,6 +21,42 @@ claude mcp add toolplan -- node "<absolute-path-to-repo>/dist/index.js"
 
 Verify it's registered: `claude mcp list`.
 
+### `/toolplan` slash command
+
+Two options, use either or both:
+
+1. **Native MCP prompt (zero install):** once the server is registered,
+   Claude Code auto-exposes the server's `plan` prompt as
+   `/mcp__toolplan__plan`. Type it, pass your idea, done.
+2. **Clean `/toolplan` name:** copy [commands/toolplan.md](../commands/toolplan.md)
+   into `~/.claude/commands/` (all projects) or `<project>/.claude/commands/`
+   (one project):
+
+   ```sh
+   # from a clone
+   cp commands/toolplan.md ~/.claude/commands/toolplan.md
+   # or from the installed npm package
+   cp node_modules/toolplan-mcp/commands/toolplan.md ~/.claude/commands/toolplan.md
+   ```
+
+   Then: `/toolplan an app that tracks freelance invoices` → the agent calls
+   `plan_project`, shows you the refined prompt verbatim, and waits for your
+   go-ahead (proceed / edit / regenerate) before building anything.
+
+## OpenAI Codex CLI
+
+Register the server in `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.toolplan]
+command = "npx"
+args = ["-y", "toolplan-mcp"]
+```
+
+For a `/toolplan` custom prompt, copy
+[commands/codex-toolplan.md](../commands/codex-toolplan.md) to
+`~/.codex/prompts/toolplan.md`.
+
 ## Cursor
 
 Add to `.cursor/mcp.json` (project-level) or the global Cursor MCP config:
@@ -48,6 +84,10 @@ Or pointing at a local build:
   }
 }
 ```
+
+Cursor has no per-command slash files; either invoke the tool in chat
+("use plan_project on this idea: ...") or add the rules-file instruction
+from "Make it automatic" below to `.cursor/rules`.
 
 ## Generic stdio host
 

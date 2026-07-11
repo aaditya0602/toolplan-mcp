@@ -26,6 +26,17 @@ async function main() {
   }
 
   console.log(text);
+
+  const promptResult = await client.getPrompt({
+    name: "plan",
+    arguments: { idea: "A SaaS dashboard that scrapes competitor prices", grade: "personal" },
+  });
+  const promptText = promptResult.messages[0]?.content;
+  if (promptText?.type !== "text" || !promptText.text.includes("Do NOT start building yet")) {
+    throw new Error("plan prompt missing or malformed");
+  }
+  console.log("\nplan prompt OK (review-first instruction present)");
+
   await client.close();
 }
 

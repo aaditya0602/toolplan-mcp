@@ -5,7 +5,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 import { loadKb } from "./kb.js";
-import { handlePlanProject } from "./handler.js";
+import { buildPlanPromptText, handlePlanProject } from "./handler.js";
 
 // When installed from npm, cwd-relative "./kb" won't exist next to the
 // process — resolve the bundled KB relative to this module file instead.
@@ -18,7 +18,40 @@ const entries = loadKb(kbDir);
 // call. See src/handler.ts for the log line shape.
 const logPath = process.env.TOOLPLAN_LOG;
 
-const server = new McpServer({ name: "toolplan-mcp", version: "0.1.0" });
+const server = new McpServer({ name: "toolplan-mcp", version: "0.2.0" });
+
+// MCP prompt: hosts that support prompts expose this as a slash command
+// (Claude Code: /mcp__toolplan__plan). Prompt args are strings per MCP spec.
+server.registerPrompt(
+  "plan",
+  {
+    title: "Refine a project idea into a polished first prompt",
+    description:
+      "Turns a raw project idea into an enriched prompt (stack, under-recommended tools, token-saving directives) and presents it for review before any building starts.",
+    argsSchema: {
+      idea: z.string().describe("Your raw project idea, in plain words"),
+      grade: z
+        .string()
+        .optional()
+        .describe('"industry" or "personal" (default: personal)'),
+    },
+  },
+  ({ idea, grade }) => ({
+    messages: [
+      {
+        role: "user" as const,
+        content: {
+          type: "text" as const,
+          text: buildPlanPromptText(
+            entries,
+            { idea, grade: grade === "industry" ? "industry" : "personal" },
+            logPath
+          ),
+        },
+      },
+    ],
+  })
+);
 
 server.registerTool(
   "plan_project",

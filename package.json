@@ -1,6 +1,6 @@
 {
   "name": "toolplan-mcp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "MCP server that turns a raw project idea into a polished, cost-aware first prompt: stack pick, under-recommended OSS tools, and token-saving execution directives",
   "keywords": [
     "mcp",
@@ -27,6 +27,7 @@
   "files": [
     "dist",
     "kb",
+    "commands",
     "docs/KB_SCHEMA.md",
     "README.md",
     "LICENSE"

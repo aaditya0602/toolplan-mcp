@@ -47,6 +47,24 @@ function logUsage(logPath: string, args: PlanProjectArgs, matchResult: MatchResu
 }
 
 /**
+ * Text for the MCP "plan" prompt: the enriched prompt plus an instruction to
+ * present it for user review instead of building immediately. Hosts that
+ * expose MCP prompts as slash commands inject this as the user message.
+ */
+export function buildPlanPromptText(entries: KbEntry[], args: PlanProjectArgs, logPath?: string): string {
+  const prompt = handlePlanProject(entries, args, logPath).content[0].text;
+  return [
+    "Below is a refined project prompt produced by ToolPlan from my raw idea.",
+    "Show it to me verbatim (in a markdown block) so I can review or edit it.",
+    "Do NOT start building yet — wait until I confirm or paste back an edited version.",
+    "",
+    "---",
+    "",
+    prompt,
+  ].join("\n");
+}
+
+/**
  * Core plan_project logic, factored out of the MCP tool registration so it
  * can be unit-tested (and so index.ts stays a thin server wrapper).
  */
