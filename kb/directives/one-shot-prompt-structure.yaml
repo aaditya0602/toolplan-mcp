@@ -1,0 +1,19 @@
+name: one-shot-prompt-structure
+category: directive
+summary: >
+  Put goal, constraints, chosen stack, and explicit done-criteria in the first
+  prompt so the agent has direction from turn one.
+use_case_tags: [universal]
+keywords: [prompt, one-shot, structure, constraints, done-criteria, goal, first-prompt]
+grade: both
+cost_profile: >
+  A structured first prompt front-loads the context the agent would otherwise
+  ask for or guess wrong, so even non-frontier models reach a good result in
+  fewer turns.
+why_models_miss_it: >
+  The model can't ask for structure it isn't given; casual users send a one-
+  line request, so the agent spends turns re-deriving constraints that could
+  have been stated upfront.
+pairs_with: [plan-first-then-execute, scope-to-mvp]
+source_url: https://www.anthropic.com/engineering/claude-code-best-practices
+last_verified: "2026-07-11"

@@ -1,0 +1,17 @@
+name: t3-stack
+category: stack
+summary: >
+  Next.js + tRPC + Prisma/Drizzle + Tailwind, wired end-to-end type-safe by
+  create-t3-app.
+use_case_tags: [saas, crud, dashboard, fullstack, auth]
+keywords: [t3, create-t3-app, nextjs, trpc, prisma, tailwind, typescript, typesafe]
+grade: both
+cost_profile: >
+  End-to-end type safety from DB to client means a schema change surfaces as a
+  compile error everywhere it matters, so the agent fixes types once rather
+  than chasing runtime mismatches turn by turn.
+pairs_with: [trpc, drizzle-orm, shadcn-ui, zod]
+avoid_when: >
+  You need a non-Next backend or want to avoid tRPC's client coupling.
+source_url: https://create.t3.gg
+last_verified: "2026-07-11"

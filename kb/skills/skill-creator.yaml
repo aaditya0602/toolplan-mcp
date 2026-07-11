@@ -1,0 +1,21 @@
+name: skill-creator
+category: skill
+summary: >
+  Anthropic's meta-skill for authoring, evaluating, and optimizing new Agent
+  Skills, including description tuning and eval runs.
+use_case_tags: [skills, authoring, tooling, meta]
+keywords: [skill-creator, skills, authoring, meta, eval, anthropic, template]
+grade: both
+cost_profile: >
+  Structures skill authoring so custom project directives become reusable
+  skills, replacing repeated ad-hoc prompting with an installed capability the
+  agent triggers automatically.
+why_models_miss_it: >
+  Users don't know skills can be authored to encode their own conventions;
+  without this meta-skill they re-paste the same instructions every session
+  instead of packaging them once.
+pairs_with: [mcp-builder]
+avoid_when: >
+  You only need a one-off instruction, not a reusable skill.
+source_url: https://github.com/anthropics/skills/tree/main/skills/skill-creator
+last_verified: "2026-07-11"

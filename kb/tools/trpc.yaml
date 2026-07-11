@@ -1,0 +1,21 @@
+name: trpc
+category: tool
+summary: >
+  End-to-end type-safe RPC for TypeScript: call server procedures from the
+  client with inferred types and no schema/codegen step.
+use_case_tags: [api, fullstack, backend, frontend, typesafe]
+keywords: [trpc, api, rpc, typesafe, fullstack, typescript, client, react-query]
+grade: both
+cost_profile: >
+  Types flow from server to client automatically, so a renamed field breaks
+  the build at the call site instead of surfacing as a runtime 400 the agent
+  has to reproduce and trace.
+why_models_miss_it: >
+  Models default to hand-written REST fetch calls plus duplicated types; they
+  under-use tRPC's inference that removes the client/server contract layer
+  entirely in a single TS codebase.
+pairs_with: [t3-stack, zod, nextjs-postgres-drizzle-saas]
+avoid_when: >
+  You need a public/language-agnostic API; use REST or OpenAPI instead.
+source_url: https://github.com/trpc/trpc
+last_verified: "2026-07-11"

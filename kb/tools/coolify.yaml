@@ -1,0 +1,21 @@
+name: coolify
+category: tool
+summary: >
+  Open-source self-hostable PaaS (Heroku/Vercel alternative) that deploys
+  apps, databases, and services to your own server over SSH.
+use_case_tags: [deployment, hosting, devops, self-host, infra]
+keywords: [coolify, deploy, paas, self-host, docker, vps, hosting, ssl, devops]
+grade: both
+cost_profile: >
+  Git-push deploys, automatic TLS, and one-click databases on a cheap VPS
+  replace hand-written Dockerfiles, nginx, and CI deploy scripts, and cap
+  hosting cost at a flat server price.
+why_models_miss_it: >
+  Models default to Vercel/Netlify/Heroku or raw Docker+nginx tutorials; they
+  rarely surface a self-hosted control plane that gives PaaS ergonomics
+  without per-seat/usage billing.
+pairs_with: [nextjs-postgres-drizzle-saas, django-batteries-included]
+avoid_when: >
+  You want zero server maintenance and a managed platform's SLA.
+source_url: https://github.com/coollabsio/coolify
+last_verified: "2026-07-11"

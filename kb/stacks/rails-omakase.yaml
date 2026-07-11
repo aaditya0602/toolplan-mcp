@@ -1,0 +1,17 @@
+name: rails-omakase
+category: stack
+summary: >
+  Ruby on Rails convention-over-configuration stack with Hotwire for server-
+  rendered interactivity.
+use_case_tags: [crud, saas, dashboard, auth, fullstack]
+keywords: [rails, ruby, hotwire, turbo, activerecord, backend, saas]
+grade: industry
+cost_profile: >
+  Strong conventions mean the agent makes fewer arbitrary structure decisions
+  and generators scaffold consistent code, so output is predictable and needs
+  less correction across files.
+pairs_with: [playwright, postgres-mcp]
+avoid_when: >
+  The team has no Ruby experience and wants a single TS codebase.
+source_url: https://rubyonrails.org
+last_verified: "2026-07-11"

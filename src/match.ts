@@ -13,7 +13,9 @@ export interface MatchResult {
  */
 function keywordInText(keyword: string, text: string): boolean {
   const escaped = keyword.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  return new RegExp(`(^|[^a-z0-9])${escaped}($|[^a-z0-9])`).test(text);
+  // Word-boundary match with light plural/inflection tolerance so "scrape"
+  // hits "scrapes"/"scraped", without substring false positives ("ai" in "email").
+  return new RegExp(`(^|[^a-z0-9])${escaped}(s|es|d|ed|ing)?($|[^a-z0-9])`).test(text);
 }
 
 function scoreEntry(entry: KbEntry, ideaLower: string, tagsLower: string[]): number {
@@ -53,11 +55,19 @@ export function matchEntries(
     .slice(0, 2)
     .map((s) => s.entry);
 
-  const recommendations = scored
-    .filter((s) => ["tool", "mcp", "skill"].includes(s.entry.category) && s.score > 0)
+  // Universal-tagged tools/mcps/skills (session-wide token savers like output
+  // compression) always surface — that's the product's headline value.
+  const recCategories = ["tool", "mcp", "skill"];
+  const universalRecs = gradeFiltered.filter(
+    (e) => recCategories.includes(e.category) && isUniversal(e)
+  );
+  const scoredRecs = scored
+    .filter(
+      (s) => recCategories.includes(s.entry.category) && !isUniversal(s.entry) && s.score > 0
+    )
     .sort(byScoreDesc)
-    .slice(0, 6)
     .map((s) => s.entry);
+  const recommendations = [...universalRecs, ...scoredRecs].slice(0, 9);
 
   const universalDirectives = gradeFiltered.filter((e) => e.category === "directive" && isUniversal(e));
   const matchingNonUniversalDirectives = scored

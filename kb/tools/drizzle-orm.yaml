@@ -1,0 +1,21 @@
+name: drizzle-orm
+category: tool
+summary: >
+  TypeScript ORM with a SQL-like typed query builder and schema-first
+  migrations.
+use_case_tags: [database, orm, backend, postgres, fullstack]
+keywords: [drizzle, orm, sql, postgres, mysql, sqlite, migrations, typescript, schema]
+grade: both
+cost_profile: >
+  Fully typed queries mean malformed SQL fails at compile time, not at runtime
+  against a live DB, removing a whole category of trial-and-error the agent
+  otherwise burns turns on.
+why_models_miss_it: >
+  Prisma dominates training data as the default TS ORM; models rarely propose
+  Drizzle, whose lighter runtime and SQL-transparent queries suit serverless
+  and edge deploys better.
+pairs_with: [nextjs-postgres-drizzle-saas, zod, supabase, postgres-mcp]
+avoid_when: >
+  A team wants Prisma's mature GUI/studio and generated client conventions.
+source_url: https://github.com/drizzle-team/drizzle-orm
+last_verified: "2026-07-11"

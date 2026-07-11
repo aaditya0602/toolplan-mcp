@@ -1,0 +1,18 @@
+name: model-tiering
+category: directive
+summary: >
+  Match model tier to task: a cheap fast model for mechanical or template
+  work, a strong model only where judgment is required.
+use_case_tags: [universal]
+keywords: [model-tier, cheap-model, cost, routing, haiku, sonnet, opus]
+grade: both
+cost_profile: >
+  Running scaffolding, formatting, and boilerplate on a cheaper model reserves
+  expensive tokens for design and debugging, cutting cost with no quality loss
+  on rote work.
+why_models_miss_it: >
+  A single-model chat runs everything at one price; casual users don't route
+  mechanical work to a cheaper tier and overpay for every trivial edit.
+pairs_with: [subagent-delegation, context-window-hygiene]
+source_url: https://www.anthropic.com/engineering/building-effective-agents
+last_verified: "2026-07-11"

@@ -1,0 +1,21 @@
+name: mcp-builder
+category: skill
+summary: >
+  Anthropic skill that guides generating Model Context Protocol server code so
+  an agent can extend its own toolset.
+use_case_tags: [mcp, backend, tooling, integration]
+keywords: [mcp-builder, mcp, server, tools, integration, anthropic, sdk]
+grade: both
+cost_profile: >
+  Provides a correct MCP scaffold and conventions, so the agent builds a
+  working server from a spec instead of trial-and-erroring the protocol wiring
+  and tool schemas.
+why_models_miss_it: >
+  The MCP spec is newer than most training data; without this skill models
+  improvise server structure and get transport/tool-schema details wrong, and
+  users don't know a guided builder exists.
+pairs_with: [skill-creator, github-mcp]
+avoid_when: >
+  An existing off-the-shelf MCP server already covers the integration.
+source_url: https://github.com/anthropics/skills/tree/main/skills/mcp-builder
+last_verified: "2026-07-11"

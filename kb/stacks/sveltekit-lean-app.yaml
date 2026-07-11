@@ -1,0 +1,16 @@
+name: sveltekit-lean-app
+category: stack
+summary: >
+  SvelteKit full-stack app with file-based routing and minimal client runtime.
+use_case_tags: [crud, dashboard, fullstack, personal, spa]
+keywords: [sveltekit, svelte, fullstack, forms, dashboard]
+grade: both
+cost_profile: >
+  Less boilerplate per feature than React (no useEffect/useMemo ceremony,
+  built-in form actions and load functions) means fewer lines for the agent to
+  write and fewer re-render bugs to debug.
+pairs_with: [drizzle-orm, better-auth, zod]
+avoid_when: >
+  The team already standardizes on React and its component ecosystem.
+source_url: https://svelte.dev/docs/kit
+last_verified: "2026-07-11"

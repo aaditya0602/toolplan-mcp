@@ -1,0 +1,21 @@
+name: postgres-mcp
+category: mcp
+summary: >
+  Postgres MCP Pro: configurable read/write DB access plus index tuning,
+  EXPLAIN analysis, and health checks for an agent.
+use_case_tags: [database, postgres, performance, backend, debugging]
+keywords: [postgres, mcp, sql, database, index, explain, performance, tuning, query]
+grade: both
+cost_profile: >
+  The agent inspects the live schema, runs EXPLAIN, and validates queries
+  against the real DB, so it stops hallucinating column names and slow queries
+  and gets ground truth instead of guessing.
+why_models_miss_it: >
+  Users don't realize an agent can be given safe, read-only DB introspection;
+  without it the model invents schema details, and casual users never wire up
+  a performance-aware DB server.
+pairs_with: [drizzle-orm, supabase-mcp, django-batteries-included]
+avoid_when: >
+  Production DBs where even read access to the agent is disallowed by policy.
+source_url: https://github.com/crystaldba/postgres-mcp
+last_verified: "2026-07-11"

@@ -1,0 +1,18 @@
+name: eval-or-test-first
+category: directive
+summary: >
+  Define a test or measurable success criterion before implementing, then code
+  toward making it pass.
+use_case_tags: [universal]
+keywords: [test-first, tdd, eval, success-criteria, verification, criteria]
+grade: both
+cost_profile: >
+  A concrete target gives the agent an objective stop condition, ending the
+  loop where it keeps 'improving' code with no definition of done.
+why_models_miss_it: >
+  Models implement first and rarely write the check; without a stated success
+  criterion they self-assess optimistically and users can't tell if it
+  actually works.
+pairs_with: [task-by-task-with-verification, webapp-testing]
+source_url: https://www.anthropic.com/engineering/claude-code-best-practices
+last_verified: "2026-07-11"

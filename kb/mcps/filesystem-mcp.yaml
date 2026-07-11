@@ -1,0 +1,21 @@
+name: filesystem-mcp
+category: mcp
+summary: >
+  Reference MCP server for scoped local filesystem access (read, write,
+  search) within allowed directories.
+use_case_tags: [filesystem, local, tooling, automation]
+keywords: [filesystem, files, mcp, read, write, local, directory, modelcontextprotocol]
+grade: both
+cost_profile: >
+  Gives non-coding-CLI MCP hosts safe, directory-scoped file access, so the
+  agent reads and edits project files directly rather than round-tripping
+  content through chat.
+why_models_miss_it: >
+  In hosts without built-in file tools users paste file contents manually;
+  they don't know the reference filesystem server grants scoped, permissioned
+  access.
+pairs_with: [github-mcp]
+avoid_when: >
+  The host (e.g. a coding CLI) already provides native file tools.
+source_url: https://github.com/modelcontextprotocol/servers
+last_verified: "2026-07-11"

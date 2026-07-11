@@ -1,0 +1,22 @@
+name: ponytail
+category: skill
+summary: >
+  Minimalist code-generation skill enforcing a decision ladder: does this need
+  to exist, is it already here, does stdlib or a native feature do it, before
+  writing new code.
+use_case_tags: [universal, code-quality, reuse, cost]
+keywords: [ponytail, minimal, reuse, stdlib, less-code, ladder, dependencies]
+grade: both
+cost_profile: >
+  Forces reuse and native-feature checks before generation (reported ~54% less
+  code), so the agent produces smaller, cheaper-to-maintain output and adds
+  fewer dependencies.
+why_models_miss_it: >
+  Models bias toward writing new code and pulling in packages; they don't
+  spontaneously run a reuse-first decision ladder, and users rarely prompt for
+  it.
+pairs_with: [karpathy-guidelines, reuse-before-build]
+avoid_when: >
+  A throwaway prototype where minimizing footprint isn't worth the checks.
+source_url: https://github.com/DietrichGebert/ponytail
+last_verified: "2026-07-11"

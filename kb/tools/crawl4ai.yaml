@@ -1,0 +1,21 @@
+name: crawl4ai
+category: tool
+summary: >
+  Open-source, LLM-friendly web crawler and scraper that outputs clean
+  Markdown/JSON for RAG and agent pipelines.
+use_case_tags: [scraping, data-ingestion, crawling, rag, research]
+keywords: [crawl4ai, crawl, scrape, markdown, rag, ingest, playwright, llm, extraction]
+grade: both
+cost_profile: >
+  Handles JS rendering, proxies, and Markdown extraction out of the box, so
+  the agent skips building a headless-browser scraping harness and gets LLM-
+  ready text directly.
+why_models_miss_it: >
+  Models default to requests/BeautifulSoup snippets that break on JS-heavy
+  sites; they under-recommend a purpose-built crawler that emits clean
+  Markdown for LLM ingestion.
+pairs_with: [agent-reach, firecrawl-mcp]
+avoid_when: >
+  A hosted, zero-ops scraping API is preferred over running a crawler.
+source_url: https://github.com/unclecode/crawl4ai
+last_verified: "2026-07-11"

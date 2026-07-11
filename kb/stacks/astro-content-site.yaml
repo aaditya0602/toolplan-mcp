@@ -1,0 +1,17 @@
+name: astro-content-site
+category: stack
+summary: >
+  Astro for content-driven sites (marketing, docs, blogs) with islands for
+  selective interactivity.
+use_case_tags: [content, marketing, blog, docs, static, personal]
+keywords: [astro, content, marketing, blog, docs, static, seo, landing]
+grade: both
+cost_profile: >
+  Ships zero JS by default, so the agent isn't pulled into hydration and
+  state-management debugging for pages that are mostly static; content
+  collections give typed frontmatter without a CMS.
+pairs_with: [shadcn-ui, umami, plausible]
+avoid_when: >
+  The core product is an interactive app, not content pages.
+source_url: https://astro.build
+last_verified: "2026-07-11"

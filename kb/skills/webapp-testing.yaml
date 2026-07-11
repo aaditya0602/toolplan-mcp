@@ -1,0 +1,20 @@
+name: webapp-testing
+category: skill
+summary: >
+  Anthropic skill that guides writing and running automated UI tests, bridging
+  requirements to executable browser test scripts.
+use_case_tags: [testing, e2e, frontend, quality]
+keywords: [webapp-testing, testing, ui, e2e, browser, automation, quality, anthropic]
+grade: both
+cost_profile: >
+  Turns feature requirements into runnable UI tests, giving the agent an
+  objective pass/fail signal to iterate against instead of self-reporting
+  'done' without verification.
+why_models_miss_it: >
+  Models tend to claim a feature works without exercising it; users don't know
+  a skill can make write-tests-then-verify the default loop for web UIs.
+pairs_with: [playwright, playwright-mcp, eval-or-test-first]
+avoid_when: >
+  A backend-only or non-UI change with nothing to drive in a browser.
+source_url: https://github.com/anthropics/skills/tree/main/skills/webapp-testing
+last_verified: "2026-07-11"

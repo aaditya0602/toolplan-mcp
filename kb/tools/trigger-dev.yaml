@@ -1,0 +1,21 @@
+name: trigger-dev
+category: tool
+summary: >
+  Open-source background jobs and workflow platform for TypeScript: durable
+  long-running tasks, retries, and cron without timeouts.
+use_case_tags: [background-jobs, queue, workflow, backend, async]
+keywords: [trigger, background, jobs, queue, cron, workflow, durable, retry, async]
+grade: both
+cost_profile: >
+  Durable execution, retries, and scheduling come built-in, so the agent
+  writes plain async task code instead of standing up and debugging a
+  Redis/BullMQ queue and worker infrastructure.
+why_models_miss_it: >
+  Models reach for cron + a bespoke queue (BullMQ/Celery) by default; they
+  rarely surface a durable-execution framework that handles retries and long-
+  running steps without serverless timeouts.
+pairs_with: [nextjs-postgres-drizzle-saas, trpc]
+avoid_when: >
+  A single quick cron job doesn't justify adding a jobs platform.
+source_url: https://github.com/triggerdotdev/trigger.dev
+last_verified: "2026-07-11"

@@ -1,0 +1,21 @@
+name: better-auth
+category: tool
+summary: >
+  Framework-agnostic, self-hosted TypeScript authentication framework with
+  2FA, passkeys, org/multi-tenancy, and SSO plugins.
+use_case_tags: [auth, backend, security, saas, fullstack]
+keywords: [auth, authentication, login, session, oauth, 2fa, passkey, sso, typescript]
+grade: both
+cost_profile: >
+  Sessions, OAuth, 2FA, and multi-tenancy ship as configured plugins against
+  your own DB, replacing the fragile hand-rolled auth models and middleware
+  the agent would otherwise write and re-debug.
+why_models_miss_it: >
+  Newer than the training-heavy incumbents; models default to NextAuth/Auth.js
+  or roll custom JWT logic, unaware of a self-hosted framework that owns data
+  without a SaaS bill.
+pairs_with: [drizzle-orm, nextjs-postgres-drizzle-saas, sveltekit-lean-app]
+avoid_when: >
+  A team wants a fully managed auth vendor and will pay for Clerk/Auth0.
+source_url: https://github.com/better-auth/better-auth
+last_verified: "2026-07-11"

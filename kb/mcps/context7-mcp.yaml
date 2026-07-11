@@ -1,0 +1,21 @@
+name: context7-mcp
+category: mcp
+summary: >
+  MCP server that injects version-specific, up-to-date library documentation
+  into the model's context on demand.
+use_case_tags: [documentation, dependencies, accuracy, dx]
+keywords: [context7, docs, documentation, versions, upstash, mcp, api, reference]
+grade: both
+cost_profile: >
+  Pulls current docs for the exact library version in use, cutting the retry
+  loop where the model writes calls against an outdated API it half-remembers
+  from training.
+why_models_miss_it: >
+  A model can't know its own knowledge is stale for a fast-moving package;
+  without this server it confidently emits deprecated APIs, and users don't
+  know a live-docs injector removes that failure mode.
+pairs_with: [drizzle-orm, trpc, better-auth]
+avoid_when: >
+  Working against a stable, well-known stdlib the model already knows well.
+source_url: https://github.com/upstash/context7
+last_verified: "2026-07-11"

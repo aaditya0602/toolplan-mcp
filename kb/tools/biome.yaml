@@ -1,0 +1,21 @@
+name: biome
+category: tool
+summary: >
+  Rust-based formatter and linter for JS/TS that replaces ESLint + Prettier
+  with one fast tool.
+use_case_tags: [linting, formatting, tooling, dx, ci]
+keywords: [biome, lint, format, prettier, eslint, rust, tooling, ci]
+grade: both
+cost_profile: >
+  One binary, near-zero config, and speed replace the ESLint+Prettier plugin
+  sprawl, so the agent doesn't spend turns reconciling conflicting configs or
+  waiting on slow lint runs.
+why_models_miss_it: >
+  ESLint+Prettier is the overwhelmingly documented default; models keep
+  scaffolding that two-tool setup and don't propose the single-tool Rust
+  replacement.
+pairs_with: [vite-react-express-personal, t3-stack]
+avoid_when: >
+  You depend on a specific ESLint plugin Biome hasn't reimplemented yet.
+source_url: https://github.com/biomejs/biome
+last_verified: "2026-07-11"

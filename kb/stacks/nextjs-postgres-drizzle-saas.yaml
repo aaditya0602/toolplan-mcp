@@ -1,0 +1,18 @@
+name: nextjs-postgres-drizzle-saas
+category: stack
+summary: >
+  Next.js App Router + Postgres + Drizzle ORM full-stack TypeScript stack for
+  production SaaS.
+use_case_tags: [saas, dashboard, crud, auth, payments, fullstack]
+keywords: [nextjs, next.js, react, postgres, drizzle, typescript, saas, dashboard, vercel]
+grade: industry
+cost_profile: >
+  One language end to end (TS) and a single deploy target (Vercel or a Node
+  host) means the agent debugs one type system, not two. Drizzle's typed
+  schema lets the model infer query shapes without round-tripping to a running
+  DB, cutting failed-query iterations.
+pairs_with: [drizzle-orm, shadcn-ui, better-auth, clerk, zod, trpc]
+avoid_when: >
+  A static content site with no dynamic data would ship faster on Astro.
+source_url: https://nextjs.org
+last_verified: "2026-07-11"

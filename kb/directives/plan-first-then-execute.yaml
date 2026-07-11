@@ -1,0 +1,17 @@
+name: plan-first-then-execute
+category: directive
+summary: >
+  Produce and confirm an ordered implementation plan before writing code, then
+  execute against it.
+use_case_tags: [universal]
+keywords: [plan, planning, design-first, architecture, order]
+grade: both
+cost_profile: >
+  A plan surfaces wrong assumptions before code is written, so corrections
+  cost a sentence instead of a rewrite across several files.
+why_models_miss_it: >
+  Prompted with a task, models start coding immediately; casual users don't
+  ask for a plan first, so mistakes compound before anyone can steer.
+pairs_with: [one-shot-prompt-structure, walking-skeleton-first]
+source_url: https://www.anthropic.com/engineering/claude-code-best-practices
+last_verified: "2026-07-11"

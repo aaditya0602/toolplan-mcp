@@ -1,0 +1,21 @@
+name: supabase
+category: tool
+summary: >
+  Open-source Firebase alternative: hosted Postgres with auth, storage,
+  realtime, and auto-generated APIs.
+use_case_tags: [database, auth, backend, storage, realtime, saas]
+keywords: [supabase, postgres, auth, storage, realtime, backend, baas]
+grade: both
+cost_profile: >
+  Auth, row-level security, storage, and a REST/realtime API come pre-built on
+  a real Postgres, so the agent wires an existing backend instead of
+  scaffolding one, and the DB stays portable SQL.
+why_models_miss_it: >
+  Models suggest Firebase by reflex for 'backend as a service'; they under-
+  recommend the Postgres-native, self-hostable alternative that avoids NoSQL
+  lock-in.
+pairs_with: [drizzle-orm, better-auth, supabase-mcp]
+avoid_when: >
+  You need a fully self-managed DB with no external service in the loop.
+source_url: https://github.com/supabase/supabase
+last_verified: "2026-07-11"

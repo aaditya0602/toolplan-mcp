@@ -1,0 +1,22 @@
+name: caveman
+category: skill
+summary: >
+  Claude Code skill that compresses the agent's prose responses to caveman-
+  style fragments, cutting output tokens while keeping code, commands, and
+  errors byte-for-byte exact.
+use_case_tags: [universal, token-efficiency, cost]
+keywords: [caveman, tokens, compress, brief, cost, efficiency, output]
+grade: both
+cost_profile: >
+  Trims filler from every model reply (measured ~65% output-token reduction)
+  without touching technical content, so long agent sessions cost less with no
+  accuracy loss.
+why_models_miss_it: >
+  A model won't self-impose a terse output style unprompted, and casual users
+  don't know a skill can enforce it session-wide; verbose prose is the default
+  and quietly inflates token bills.
+pairs_with: [karpathy-guidelines, ponytail]
+avoid_when: >
+  Output is read by non-technical stakeholders who need full prose.
+source_url: https://github.com/JuliusBrussee/caveman
+last_verified: "2026-07-11"

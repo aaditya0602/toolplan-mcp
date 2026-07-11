@@ -53,8 +53,8 @@ describe("matchEntries", () => {
     expect(result.recommendations.map((r) => r.name)).not.toContain("low-match");
   });
 
-  it("caps recommendations at top 6 and stacks at top 2", () => {
-    const tools: KbEntry[] = Array.from({ length: 8 }, (_, i) =>
+  it("caps recommendations at 9 and stacks at top 2", () => {
+    const tools: KbEntry[] = Array.from({ length: 11 }, (_, i) =>
       entry({ name: `tool-${i}`, category: "tool", keywords: ["scrape"], why_models_miss_it: "x" })
     );
     const stacks: KbEntry[] = Array.from({ length: 5 }, (_, i) =>
@@ -62,8 +62,29 @@ describe("matchEntries", () => {
     );
 
     const result = matchEntries([...tools, ...stacks], "scrape data", "personal");
-    expect(result.recommendations).toHaveLength(6);
+    expect(result.recommendations).toHaveLength(9);
     expect(result.stacks).toHaveLength(2);
+  });
+
+  it("always includes universal-tagged tools/skills in recommendations", () => {
+    const entries: KbEntry[] = [
+      entry({ name: "universal-skill", category: "skill", use_case_tags: ["universal"], keywords: ["tokens"], why_models_miss_it: "x" }),
+    ];
+
+    const result = matchEntries(entries, "an app for tracking invoices", "personal");
+    expect(result.recommendations.map((r) => r.name)).toContain("universal-skill");
+  });
+
+  it("matches keywords with plural/inflection tolerance but not substrings", () => {
+    const entries: KbEntry[] = [
+      entry({ name: "scraper-tool", category: "tool", keywords: ["scrape"], why_models_miss_it: "x" }),
+      entry({ name: "ai-tool", category: "tool", keywords: ["ai"], why_models_miss_it: "x" }),
+    ];
+
+    const result = matchEntries(entries, "a dashboard that scrapes email inboxes", "personal");
+    const names = result.recommendations.map((r) => r.name);
+    expect(names).toContain("scraper-tool");
+    expect(names).not.toContain("ai-tool");
   });
 
   it("always includes universal directives regardless of idea text, plus matching non-universal ones", () => {

@@ -1,0 +1,20 @@
+name: plausible
+category: tool
+summary: >
+  Open-source, cookie-free, self-hostable web analytics with a single
+  lightweight script.
+use_case_tags: [analytics, privacy, self-host, marketing]
+keywords: [plausible, analytics, privacy, cookieless, metrics, self-host, gdpr]
+grade: both
+cost_profile: >
+  Cookie-free tracking means no consent banner to build or maintain, and self-
+  hosting removes per-pageview fees; the agent adds one script tag instead of
+  a tag-manager setup.
+why_models_miss_it: >
+  Google Analytics is the reflexive default in model output; privacy-first,
+  cookieless analytics that skip consent UI are rarely proposed.
+pairs_with: [astro-content-site, umami]
+avoid_when: >
+  You need deep event/user-level product analytics rather than page metrics.
+source_url: https://github.com/plausible/analytics
+last_verified: "2026-07-11"

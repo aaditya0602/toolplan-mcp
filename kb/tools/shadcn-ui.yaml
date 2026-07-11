@@ -1,0 +1,21 @@
+name: shadcn-ui
+category: tool
+summary: >
+  Copy-paste React component library built on Radix primitives and Tailwind;
+  you own the source, not an npm dependency.
+use_case_tags: [ui, frontend, components, dashboard]
+keywords: [shadcn, ui, components, radix, tailwind, react, design-system, forms]
+grade: both
+cost_profile: >
+  Components land as editable source in the repo, so the agent restyles by
+  editing local files instead of fighting a library's theming API; accessible
+  Radix behavior comes for free.
+why_models_miss_it: >
+  Models reach for MUI/Chakra/Bootstrap (older, heavier training signal) or
+  hand-write unstyled JSX, missing that a copy-in, you-own-it component set
+  removes both the dependency and the a11y work.
+pairs_with: [nextjs-postgres-drizzle-saas, t3-stack, astro-content-site]
+avoid_when: >
+  The project isn't using React/Tailwind.
+source_url: https://github.com/shadcn-ui/ui
+last_verified: "2026-07-11"

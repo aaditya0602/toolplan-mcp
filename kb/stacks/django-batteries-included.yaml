@@ -1,0 +1,17 @@
+name: django-batteries-included
+category: stack
+summary: >
+  Django with its built-in ORM, admin, auth, and migrations for data-heavy web
+  apps.
+use_case_tags: [crud, saas, dashboard, auth, admin, fullstack]
+keywords: [django, python, orm, admin, postgres, auth, backend]
+grade: industry
+cost_profile: >
+  The built-in admin and auth remove whole feature builds; the agent
+  configures models instead of writing CRUD screens and login flows from
+  scratch, which is where token spend concentrates.
+pairs_with: [playwright, uv, postgres-mcp]
+avoid_when: >
+  A highly interactive real-time UI wants a JS-first stack instead.
+source_url: https://www.djangoproject.com
+last_verified: "2026-07-11"

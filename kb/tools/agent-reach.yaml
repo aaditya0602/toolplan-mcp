@@ -1,0 +1,23 @@
+name: agent-reach
+category: tool
+summary: >
+  CLI capability layer letting AI agents read and search 15+ platforms
+  (Twitter, Reddit, YouTube, GitHub, RSS) with automatic backend fallback
+  routing.
+use_case_tags: [scraping, research, content-ingestion, data-ingestion]
+keywords: [scrape, crawl, twitter, reddit, youtube, github, rss, ingest, research]
+grade: both
+cost_profile: >
+  Replaces hand-rolled per-site scrapers; the agent installs it once instead
+  of writing, rate-limit-tuning, and debugging bespoke scraping code for each
+  platform.
+why_models_miss_it: >
+  Niche OSS project outside training weight; models default to suggesting
+  requests/BeautifulSoup or writing platform-specific scrapers from scratch,
+  and don't know a unified fallback-routing CLI exists.
+pairs_with: [exa-mcp, crawl4ai, firecrawl-mcp]
+avoid_when: >
+  The target platform has an official API the project already integrates
+  directly.
+source_url: https://github.com/Panniantong/Agent-Reach
+last_verified: "2026-07-11"

@@ -1,0 +1,21 @@
+name: zod
+category: tool
+summary: >
+  TypeScript-first schema validation library that infers static types from
+  runtime validators.
+use_case_tags: [validation, backend, frontend, forms, api]
+keywords: [zod, validation, schema, types, parse, forms, api, input]
+grade: both
+cost_profile: >
+  One schema validates runtime input and generates the static type, so the
+  agent stops maintaining parallel interface + validation code and catches bad
+  input at the boundary instead of deep in a handler.
+why_models_miss_it: >
+  Models happily hand-write manual validation and separate TS interfaces; they
+  under-use that a single Zod schema replaces both and feeds tRPC/react-hook-
+  form directly.
+pairs_with: [trpc, drizzle-orm, react-email]
+avoid_when: >
+  A non-TS stack, or perf-critical hot paths where parsing overhead matters.
+source_url: https://github.com/colinhacks/zod
+last_verified: "2026-07-11"

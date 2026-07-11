@@ -1,0 +1,21 @@
+name: react-email
+category: tool
+summary: >
+  Build transactional emails as React components with a standard component set
+  that renders reliable, table-based HTML.
+use_case_tags: [email, frontend, transactional, saas, components]
+keywords: [react-email, email, transactional, html-email, resend, components, templates]
+grade: both
+cost_profile: >
+  Components emit email-client-safe HTML, so the agent stops hand-writing (and
+  re-testing) archaic table layouts and inline styles that break across
+  Outlook/Gmail.
+why_models_miss_it: >
+  Models generate raw HTML email tables from memory, which render
+  inconsistently; they under-use a component library that already solved
+  cross-client rendering.
+pairs_with: [zod, nextjs-postgres-drizzle-saas]
+avoid_when: >
+  The app sends no email, or uses a provider's own template builder.
+source_url: https://github.com/resend/react-email
+last_verified: "2026-07-11"

@@ -1,0 +1,17 @@
+name: vite-react-express-personal
+category: stack
+summary: >
+  Vite + React SPA with a small Express API for personal projects and
+  prototypes.
+use_case_tags: [crud, spa, prototype, personal, fullstack]
+keywords: [vite, react, express, node, spa, prototype, hobby]
+grade: personal
+cost_profile: >
+  No framework conventions to learn or fight; Vite's instant HMR and a hand-
+  written Express server keep the mental model tiny, so the agent generates
+  and wires code without framework-specific boilerplate.
+pairs_with: [zod, drizzle-orm, biome]
+avoid_when: >
+  A revenue app needing SSR, auth, and SEO is better served by Next.js.
+source_url: https://vite.dev
+last_verified: "2026-07-11"

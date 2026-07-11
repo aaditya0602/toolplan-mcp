@@ -1,0 +1,17 @@
+name: task-by-task-with-verification
+category: directive
+summary: >
+  Break work into small tasks and verify each (build, test, or run) before
+  starting the next.
+use_case_tags: [universal]
+keywords: [task, verify, incremental, checkpoint, test, step]
+grade: both
+cost_profile: >
+  Catching a failure at the task that caused it avoids debugging a large
+  tangled diff later, keeping each fix cheap and localized.
+why_models_miss_it: >
+  Models tend to generate a big batch of changes then declare success; users
+  don't enforce per-step verification, so bugs surface far from their cause.
+pairs_with: [eval-or-test-first, plan-first-then-execute]
+source_url: https://code.claude.com/docs/en/best-practices
+last_verified: "2026-07-11"

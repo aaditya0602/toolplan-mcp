@@ -1,0 +1,22 @@
+name: karpathy-guidelines
+category: skill
+summary: >
+  Agent guidelines (from Karpathy's notes on LLM coding pitfalls) enforcing
+  surgical changes, simplicity, explicit assumptions, and verifiable success
+  criteria.
+use_case_tags: [universal, code-quality, refactoring]
+keywords: [karpathy, guidelines, surgical, simplicity, assumptions, refactor, quality]
+grade: both
+cost_profile: >
+  Steers the model away from over-engineering and unrelated edits, so it
+  writes minimal code that solves the request and avoids the rework loops that
+  speculative abstractions cause.
+why_models_miss_it: >
+  Left alone, models over-build, silently assume, and refactor working code;
+  users don't know a skill can install these guardrails as standing behavior
+  instead of re-prompting each turn.
+pairs_with: [ponytail, caveman]
+avoid_when: >
+  A genuine large refactor is the explicit task and surgical scope is wrong.
+source_url: https://github.com/multica-ai/andrej-karpathy-skills
+last_verified: "2026-07-11"

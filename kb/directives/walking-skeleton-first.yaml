@@ -1,0 +1,19 @@
+name: walking-skeleton-first
+category: directive
+summary: >
+  Build the thinnest end-to-end slice (one path from UI to DB and back) that
+  runs, before adding features.
+use_case_tags: [universal]
+keywords: [walking-skeleton, end-to-end, vertical-slice, skeleton, mvp, integration]
+grade: both
+cost_profile: >
+  Proving the whole pipeline connects early exposes integration problems while
+  the surface area is small, avoiding expensive rewiring after many features
+  are built on a broken seam.
+why_models_miss_it: >
+  Models build feature-by-feature horizontally and wire integration last;
+  users don't request a thin end-to-end slice first, so integration bugs land
+  late and costly.
+pairs_with: [scope-to-mvp, plan-first-then-execute]
+source_url: https://www.anthropic.com/engineering/building-effective-agents
+last_verified: "2026-07-11"

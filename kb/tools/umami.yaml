@@ -1,0 +1,21 @@
+name: umami
+category: tool
+summary: >
+  Open-source, privacy-focused, self-hostable web analytics as a lightweight
+  Plausible/Google Analytics alternative.
+use_case_tags: [analytics, privacy, self-host, marketing]
+keywords: [umami, analytics, privacy, tracking, metrics, self-host, gdpr]
+grade: both
+cost_profile: >
+  A single self-hosted script gives GDPR-friendly analytics without cookie-
+  consent plumbing, so the agent skips the consent-banner and GA-config work
+  and there's no per-event billing.
+why_models_miss_it: >
+  Models reach for Google Analytics by default; they under-recommend
+  lightweight self-hosted analytics that avoid a cookie-consent flow and
+  third-party data sharing.
+pairs_with: [astro-content-site, plausible]
+avoid_when: >
+  The team wants a fully managed analytics vendor and rich funnel tooling.
+source_url: https://github.com/umami-software/umami
+last_verified: "2026-07-11"

@@ -1,0 +1,18 @@
+name: context-window-hygiene
+category: directive
+summary: >
+  Summarize or compact prior work into durable notes instead of re-reading
+  whole files repeatedly to reload context.
+use_case_tags: [universal]
+keywords: [context, compact, summarize, memory, hygiene, tokens, re-read]
+grade: both
+cost_profile: >
+  Re-reading large files each turn re-pays their token cost every time; a
+  compact running summary holds the same state for a fraction of the tokens.
+why_models_miss_it: >
+  Agents re-open files to re-establish context by default; users don't prompt
+  for summarization, so long sessions silently burn tokens re-ingesting the
+  same code.
+pairs_with: [plan-first-then-execute, model-tiering]
+source_url: https://code.claude.com/docs/en/best-practices
+last_verified: "2026-07-11"

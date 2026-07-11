@@ -1,0 +1,17 @@
+name: fastapi-react
+category: stack
+summary: >
+  FastAPI typed Python backend with a separate React frontend, sharing an
+  OpenAPI contract.
+use_case_tags: [api, crud, dashboard, fullstack, ml-backend]
+keywords: [fastapi, python, react, openapi, api, backend, pydantic]
+grade: both
+cost_profile: >
+  FastAPI auto-generates an OpenAPI schema the agent can turn into a typed
+  client, so frontend/backend contract drift (a common source of iteration) is
+  caught by types instead of at runtime.
+pairs_with: [zod, uv, playwright]
+avoid_when: >
+  A single deployable is preferred over two services to operate.
+source_url: https://fastapi.tiangolo.com
+last_verified: "2026-07-11"

@@ -1,0 +1,21 @@
+name: playwright
+category: tool
+summary: >
+  Cross-browser end-to-end testing and automation framework with auto-waiting
+  and codegen.
+use_case_tags: [testing, e2e, automation, ci, frontend]
+keywords: [playwright, testing, e2e, browser, automation, ci, integration, ui-test]
+grade: both
+cost_profile: >
+  Auto-waiting removes the flaky sleep/retry code that makes hand-written
+  browser tests unreliable, giving the agent a stable signal to verify
+  features instead of re-running and guessing.
+why_models_miss_it: >
+  Models still reach for Selenium or Cypress from older training data; they
+  under-recommend Playwright's built-in waiting and multi-browser support that
+  eliminate common flakiness.
+pairs_with: [playwright-mcp, webapp-testing, biome]
+avoid_when: >
+  A pure unit-test need where a fast runner like Vitest is enough.
+source_url: https://github.com/microsoft/playwright
+last_verified: "2026-07-11"

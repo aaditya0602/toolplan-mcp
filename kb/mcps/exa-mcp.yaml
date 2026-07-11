@@ -1,0 +1,21 @@
+name: exa-mcp
+category: mcp
+summary: >
+  MCP server exposing Exa's neural web search and page crawling to an agent
+  for real-time research.
+use_case_tags: [search, research, web, data-ingestion]
+keywords: [exa, search, web, crawl, research, mcp, neural, company-research]
+grade: both
+cost_profile: >
+  Gives the agent current web results and page extraction, so decisions about
+  libraries and APIs use live information instead of stale training knowledge,
+  cutting wrong-version rework.
+why_models_miss_it: >
+  Users assume the model can't browse; they don't wire a search server, so it
+  answers from stale memory instead of checking whether a tool is still
+  maintained in 2026.
+pairs_with: [agent-reach, context7-mcp, firecrawl-mcp]
+avoid_when: >
+  An offline or air-gapped environment forbids outbound web calls.
+source_url: https://github.com/exa-labs/exa-mcp-server
+last_verified: "2026-07-11"

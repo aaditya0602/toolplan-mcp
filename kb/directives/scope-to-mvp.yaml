@@ -1,0 +1,18 @@
+name: scope-to-mvp
+category: directive
+summary: >
+  Cut the request to the minimum viable feature set first; defer nice-to-haves
+  until the core path works.
+use_case_tags: [universal]
+keywords: [mvp, scope, minimal, defer, prioritize, feature-cut]
+grade: both
+cost_profile: >
+  Building only the core path first avoids spending tokens on features that
+  get reworked once the fundamentals shift, and gets something runnable
+  sooner.
+why_models_miss_it: >
+  Models attempt the full feature list as stated and gold-plate; users don't
+  scope down, so effort spreads across features before the core is proven.
+pairs_with: [walking-skeleton-first, reuse-before-build]
+source_url: https://www.anthropic.com/engineering/building-effective-agents
+last_verified: "2026-07-11"

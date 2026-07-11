@@ -1,0 +1,21 @@
+name: github-mcp
+category: mcp
+summary: >
+  GitHub's official MCP server for reading repos, managing issues and pull
+  requests, and monitoring Actions from an agent.
+use_case_tags: [git, github, ci, automation, project-management]
+keywords: [github, mcp, issues, pull-request, pr, actions, ci, repo, git]
+grade: both
+cost_profile: >
+  The agent queries and acts on issues, PRs, and CI directly instead of the
+  user copy-pasting logs and diffs into chat, removing a manual round-trip per
+  iteration.
+why_models_miss_it: >
+  Users treat the model as chat-only and manually shuttle GitHub state in and
+  out; they don't know an official server lets the agent read CI failures and
+  PR context itself.
+pairs_with: [playwright-mcp]
+avoid_when: >
+  The project isn't on GitHub, or read-only workflows suffice via the web UI.
+source_url: https://github.com/github/github-mcp-server
+last_verified: "2026-07-11"

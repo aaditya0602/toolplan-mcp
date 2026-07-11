@@ -1,0 +1,21 @@
+name: uv
+category: tool
+summary: >
+  Rust-based Python package and project manager replacing pip, virtualenv,
+  pip-tools, and pyenv.
+use_case_tags: [python, tooling, dependencies, dx, backend]
+keywords: [uv, python, pip, venv, packaging, dependencies, astral, lockfile]
+grade: both
+cost_profile: >
+  One fast tool with a lockfile resolves and installs deps deterministically,
+  so the agent avoids the venv-activation and resolver-conflict detours that
+  eat turns in Python setups.
+why_models_miss_it: >
+  Training data is saturated with pip/venv/poetry instructions; models default
+  to those and rarely propose uv despite its speed and single-tool
+  consolidation.
+pairs_with: [fastapi-react, django-batteries-included]
+avoid_when: >
+  A locked corporate environment mandates a specific existing toolchain.
+source_url: https://github.com/astral-sh/uv
+last_verified: "2026-07-11"

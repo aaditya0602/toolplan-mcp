@@ -1,0 +1,19 @@
+name: reuse-before-build
+category: directive
+summary: >
+  Before writing new code, check for an existing function in the codebase, the
+  standard library, a native platform feature, or an installed dependency.
+use_case_tags: [universal]
+keywords: [reuse, stdlib, dependencies, dont-reinvent, existing, native]
+grade: both
+cost_profile: >
+  Reusing what already exists produces less code to write, test, and maintain,
+  and avoids adding dependencies that expand the surface the agent must reason
+  about.
+why_models_miss_it: >
+  Models bias toward generating fresh code and don't reliably search for an
+  existing solution first; users assume the agent already checked when it
+  often didn't.
+pairs_with: [ponytail, scope-to-mvp]
+source_url: https://www.anthropic.com/engineering/claude-code-best-practices
+last_verified: "2026-07-11"

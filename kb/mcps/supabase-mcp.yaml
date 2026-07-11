@@ -1,0 +1,21 @@
+name: supabase-mcp
+category: mcp
+summary: >
+  Supabase's official MCP server to manage tables, run queries, fetch config,
+  and inspect a project from an agent.
+use_case_tags: [database, backend, supabase, admin, debugging]
+keywords: [supabase, mcp, postgres, tables, query, migrations, backend, project]
+grade: both
+cost_profile: >
+  The agent manages schema and reads real project state directly, so setup and
+  debugging happen against the actual backend instead of via guessed dashboard
+  steps relayed by the user.
+why_models_miss_it: >
+  Users manually click the Supabase dashboard and paste results back; they
+  don't know an official read-only-capable server lets the model operate the
+  project itself.
+pairs_with: [supabase, postgres-mcp]
+avoid_when: >
+  Not using Supabase, or the project forbids agent access to the backend.
+source_url: https://github.com/supabase-community/supabase-mcp
+last_verified: "2026-07-11"

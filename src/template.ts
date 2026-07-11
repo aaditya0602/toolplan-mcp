@@ -50,7 +50,13 @@ export function buildPrompt(idea: string, grade: Grade, matchResult: MatchResult
 
   const allEntries = dedupeByName([...stacks, ...recommendations, ...directives]);
   if (allEntries.length > 0) {
-    const lines = allEntries.map((e) => `- ${e.source_url} (last verified ${e.last_verified})`);
+    const seenUrls = new Set<string>();
+    const lines: string[] = [];
+    for (const e of allEntries) {
+      if (seenUrls.has(e.source_url)) continue;
+      seenUrls.add(e.source_url);
+      lines.push(`- ${e.source_url} (last verified ${e.last_verified})`);
+    }
     sections.push(`## Sources\n\n${lines.join("\n")}`);
   }
 

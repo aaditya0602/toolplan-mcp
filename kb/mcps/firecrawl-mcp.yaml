@@ -1,0 +1,22 @@
+name: firecrawl-mcp
+category: mcp
+summary: >
+  Official Firecrawl MCP server adding web scraping, crawling, and structured
+  extraction to an agent via one API.
+use_case_tags: [scraping, data-ingestion, crawling, research]
+keywords: [firecrawl, scrape, crawl, extract, markdown, mcp, web, ingest]
+grade: both
+cost_profile: >
+  The agent scrapes JS-heavy sites into clean Markdown/JSON through a managed
+  API, so it skips building and hosting a scraping stack and gets ingest-ready
+  data in one call.
+why_models_miss_it: >
+  Without the server the model writes brittle scraper snippets; users don't
+  know a hosted scraping MCP exists that handles proxies, JS rendering, and
+  extraction for the agent.
+pairs_with: [crawl4ai, agent-reach, exa-mcp]
+avoid_when: >
+  A fully self-hosted, no-external-API scraping requirement rules out the
+  hosted service.
+source_url: https://github.com/mendableai/firecrawl-mcp-server
+last_verified: "2026-07-11"

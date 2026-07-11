@@ -1,0 +1,21 @@
+name: playwright-mcp
+category: mcp
+summary: >
+  MCP server giving an agent browser automation via Playwright's accessibility
+  tree, no screenshots or vision model needed.
+use_case_tags: [testing, automation, browser, e2e, debugging]
+keywords: [playwright, browser, automation, e2e, mcp, testing, accessibility, navigate]
+grade: both
+cost_profile: >
+  The agent drives a real browser through structured accessibility snapshots,
+  so it can verify a running web app deterministically instead of guessing
+  from code, closing the build-then-check loop in-session.
+why_models_miss_it: >
+  Without this MCP configured, an agent can only reason about code statically;
+  users don't know a structured (non-vision) browser-control server exists to
+  let the model actually test the UI it wrote.
+pairs_with: [playwright, webapp-testing]
+avoid_when: >
+  No web UI to drive, or headless browsers can't run in the environment.
+source_url: https://github.com/microsoft/playwright-mcp
+last_verified: "2026-07-11"

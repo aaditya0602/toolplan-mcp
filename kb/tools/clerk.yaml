@@ -1,0 +1,22 @@
+name: clerk
+category: tool
+summary: >
+  Managed authentication and user-management service with prebuilt
+  React/Next.js components for sign-in, orgs, and sessions.
+use_case_tags: [auth, frontend, saas, security, fullstack]
+keywords: [clerk, auth, authentication, login, signup, users, organizations, session]
+grade: industry
+cost_profile: >
+  Drop-in components and hosted user management remove the entire auth UI and
+  session-security build, so the agent adds a provider and a few components
+  instead of implementing (and getting wrong) security-critical flows.
+why_models_miss_it: >
+  Models default to hand-rolled auth or NextAuth in examples; they under-
+  surface managed providers whose prebuilt org/multi-session UIs cut the most
+  error-prone code in a SaaS.
+pairs_with: [nextjs-postgres-drizzle-saas, t3-stack]
+avoid_when: >
+  Cost sensitivity or a self-hosting requirement rules out a paid SaaS; use
+  better-auth.
+source_url: https://clerk.com
+last_verified: "2026-07-11"
