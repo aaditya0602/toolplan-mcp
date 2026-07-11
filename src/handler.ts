@@ -55,7 +55,10 @@ export function buildPlanPromptText(entries: KbEntry[], args: PlanProjectArgs, l
   const prompt = handlePlanProject(entries, args, logPath).content[0].text;
   return [
     "Below is a refined project prompt produced by ToolPlan from my raw idea.",
-    "Show it to me verbatim (in a markdown block) so I can review or edit it.",
+    "If you have web search, first run the queries in its 'Live Crosscheck'",
+    "section and append clearly-better findings under 'Fresh findings",
+    "(unverified — from live search)' with source links; skip silently otherwise.",
+    "Then show me the final prompt verbatim (in a markdown block) so I can review or edit it.",
     "Do NOT start building yet — wait until I confirm or paste back an edited version.",
     "",
     "---",

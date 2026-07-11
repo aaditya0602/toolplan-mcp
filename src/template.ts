@@ -18,6 +18,38 @@ function dedupeByName(entries: KbEntry[]): KbEntry[] {
   return out;
 }
 
+/**
+ * The KB is curated but a snapshot; the calling agent usually has live web
+ * search. Emit targeted queries so it crosschecks for anything newer/better
+ * (new OSS tools, free-tier API deals) and merges findings marked unverified.
+ */
+function buildCrosscheckSection(matchResult: MatchResult): string {
+  const tags = [
+    ...new Set(
+      [...matchResult.stacks, ...matchResult.recommendations]
+        .flatMap((e) => e.use_case_tags)
+        .filter((t) => t !== "universal")
+    ),
+  ].slice(0, 3);
+  const domain = tags.length > 0 ? tags.join(" ") : "web app development";
+  const year = new Date().getFullYear();
+  return [
+    "## Live Crosscheck (agent: run before finalizing)",
+    "",
+    "The recommendations above come from a curated, human-reviewed knowledge",
+    "base — trustworthy but a snapshot. If you have web search, run these and",
+    "compare against the picks above:",
+    "",
+    `1. \`${domain} open source tools ${year}\` — anything newer that clearly beats a pick above?`,
+    `2. \`site:reddit.com OR site:news.ycombinator.com ${domain} tool recommendation ${year}\` — practitioner consensus shifts.`,
+    "3. `free tier AI API access developers " + year + "` — free/cheap API programs (e.g. model providers, hosting credits) relevant to this project.",
+    "",
+    "Rules: additions from search are UNVERIFIED — label them so, include the",
+    "source link, and prefer the curated pick when in doubt. Skip this section",
+    "entirely if you have no web access.",
+  ].join("\n");
+}
+
 export function buildPrompt(idea: string, grade: Grade, matchResult: MatchResult): string {
   const { stacks, recommendations, directives } = matchResult;
   const sections: string[] = [];
@@ -47,6 +79,8 @@ export function buildPrompt(idea: string, grade: Grade, matchResult: MatchResult
   }
 
   sections.push(`## Constraints & Quality Bar\n\n${CONSTRAINTS}`);
+
+  sections.push(buildCrosscheckSection(matchResult));
 
   const allEntries = dedupeByName([...stacks, ...recommendations, ...directives]);
   if (allEntries.length > 0) {

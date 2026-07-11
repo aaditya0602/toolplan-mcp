@@ -41,6 +41,8 @@ describe("buildPrompt", () => {
     expect(prompt).toContain("directive-a summary");
     expect(prompt).toContain("## Constraints & Quality Bar");
     expect(prompt).toContain("Plan first");
+    expect(prompt).toContain("## Live Crosscheck");
+    expect(prompt).toContain("UNVERIFIED");
     expect(prompt).toContain("## Sources");
     expect(prompt).toContain("https://example.com/entry");
     expect(prompt).toContain("2026-07-11");

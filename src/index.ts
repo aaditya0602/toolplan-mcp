@@ -18,7 +18,7 @@ const entries = loadKb(kbDir);
 // call. See src/handler.ts for the log line shape.
 const logPath = process.env.TOOLPLAN_LOG;
 
-const server = new McpServer({ name: "toolplan-mcp", version: "0.2.0" });
+const server = new McpServer({ name: "toolplan-mcp", version: "0.3.0" });
 
 // MCP prompt: hosts that support prompts expose this as a slash command
 // (Claude Code: /mcp__toolplan__plan). Prompt args are strings per MCP spec.
