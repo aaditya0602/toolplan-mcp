@@ -1,7 +1,36 @@
 {
   "name": "toolplan-mcp",
   "version": "0.1.0",
+  "description": "MCP server that turns a raw project idea into a polished, cost-aware first prompt: stack pick, under-recommended OSS tools, and token-saving execution directives",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "prompt-engineering",
+    "ai-agents",
+    "claude",
+    "tech-stack",
+    "token-optimization"
+  ],
+  "license": "MIT",
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaditya062025S/toolplan-mcp.git"
+  },
+  "homepage": "https://github.com/aaditya062025S/toolplan-mcp",
+  "bugs": {
+    "url": "https://github.com/aaditya062025S/toolplan-mcp/issues"
+  },
+  "files": [
+    "dist",
+    "kb",
+    "docs/KB_SCHEMA.md",
+    "README.md",
+    "LICENSE"
+  ],
   "bin": {
     "toolplan-mcp": "dist/index.js"
   },
@@ -10,7 +39,10 @@
     "test": "vitest run",
     "start": "node dist/index.js",
     "smoke": "tsx scripts/smoke.ts",
-    "eval": "tsx scripts/eval.ts"
+    "eval": "tsx scripts/eval.ts",
+    "stale": "tsx scripts/stale.ts",
+    "log-to-case": "tsx scripts/log-to-case.ts",
+    "prepublishOnly": "npm run build && npm test"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",

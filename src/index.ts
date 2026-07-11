@@ -1,12 +1,22 @@
+#!/usr/bin/env node
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 import { loadKb } from "./kb.js";
-import { matchEntries } from "./match.js";
-import { buildPrompt } from "./template.js";
+import { handlePlanProject } from "./handler.js";
 
-const kbDir = process.env.KB_DIR ?? "./kb";
+// When installed from npm, cwd-relative "./kb" won't exist next to the
+// process — resolve the bundled KB relative to this module file instead.
+// KB_DIR still overrides for local dev / custom KB locations.
+const defaultKbDir = join(dirname(fileURLToPath(import.meta.url)), "..", "kb");
+const kbDir = process.env.KB_DIR ?? defaultKbDir;
 const entries = loadKb(kbDir);
+
+// Phase 4 groundwork: if set, append one JSONL usage line per plan_project
+// call. See src/handler.ts for the log line shape.
+const logPath = process.env.TOOLPLAN_LOG;
 
 const server = new McpServer({ name: "toolplan-mcp", version: "0.1.0" });
 
@@ -22,11 +32,7 @@ server.registerTool(
       tags: z.array(z.string()).optional(),
     },
   },
-  async ({ idea, grade, tags }) => {
-    const matchResult = matchEntries(entries, idea, grade, tags ?? []);
-    const prompt = buildPrompt(idea, grade, matchResult);
-    return { content: [{ type: "text", text: prompt }] };
-  }
+  async ({ idea, grade, tags }) => handlePlanProject(entries, { idea, grade, tags }, logPath)
 );
 
 const transport = new StdioServerTransport();
