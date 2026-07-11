@@ -34,24 +34,25 @@ your raw idea ──▶ plan_project(idea, grade) ──▶ enriched prompt
 No live scraping at runtime — a weekly offline pipeline proposes KB updates
 as human-reviewed diffs, so advice stays current without hype pollution.
 
-## Usage
+## Quick start (Claude Code)
 
-```jsonc
-// MCP host config (e.g. Claude Code: claude mcp add)
-{
-  "toolplan": {
-    "command": "node",
-    "args": ["<path>/dist/index.js"]
-  }
-}
+```sh
+claude mcp add toolplan -- npx -y toolplan-mcp
 ```
 
-Then in your agent:
+Then either:
 
-> Use plan_project with my idea: "an app that tracks freelance invoices",
-> grade personal.
+- **`/toolplan <your idea>`** — copy `commands/toolplan.md` (shipped in the
+  npm package) to `~/.claude/commands/` first. The agent calls the tool,
+  shows you the refined prompt verbatim, and waits for you to proceed, edit,
+  or regenerate — it never starts building on its own.
+- **`/mcp__toolplan__plan`** — zero-install; Claude Code auto-exposes the
+  server's built-in `plan` prompt as a slash command.
+- Or just ask in chat: *"Use plan_project with my idea: an app that tracks
+  freelance invoices, grade personal."*
 
-Paste the returned enriched prompt as your project's first prompt.
+Other hosts (Cursor, Codex CLI, any stdio MCP host): see
+[docs/HOST_SETUP.md](docs/HOST_SETUP.md).
 
 ## Tool API
 
@@ -63,6 +64,29 @@ likely miss, execution directives, quality bar, sources.
 
 One YAML file per entry under `kb/<category>/`. Format: [docs/KB_SCHEMA.md](docs/KB_SCHEMA.md).
 Contributions welcome — PRs must pass the eval regression suite.
+
+**Privacy note:** running the tool never phones home. The KB is read-only at
+runtime and bundled with the package; nobody's usage updates it. Optional
+`TOOLPLAN_LOG` writes usage lines to a *local* file you control.
+
+### Improving the KB
+
+Three ways, smallest first:
+
+1. **Add one entry by hand.** Copy an existing YAML in `kb/<category>/`,
+   fill the fields honestly (especially `why_models_miss_it`), run
+   `npm test && npm run eval`, open a PR.
+2. **Mine your own usage.** Set `TOOLPLAN_LOG=toolplan.jsonl` in the server
+   env, use the tool for a while, then `npm run log-to-case toolplan.jsonl`
+   — real ideas become eval-case skeletons; weak matches show you exactly
+   which keywords the KB is missing.
+3. **Run the weekly refresh.** Point a Claude agent at
+   [pipeline/REFRESH.md](pipeline/REFRESH.md); it researches new tools and
+   writes proposals to `pipeline/proposals/<date>/` with evidence. You
+   review `PROPOSAL.md`, move accepted files into `kb/`, run
+   `npm test && npm run eval`, commit.
+
+Staleness check anytime: `npm run stale`.
 
 ## Development
 
