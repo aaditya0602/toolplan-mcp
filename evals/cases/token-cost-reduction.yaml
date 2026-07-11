@@ -1,0 +1,10 @@
+id: token-cost-reduction
+idea: >
+  My Claude Code sessions on our big legacy codebase are burning through our
+  token budget. I want to cut the cost of all this context without losing
+  quality.
+grade: industry
+tags: []
+must_include: [pxpipe, understand-anything]
+must_not_include: []
+notes: cost/context keywords hit pxpipe; legacy/codebase keywords hit understand-anything (2026-07-12 additions).

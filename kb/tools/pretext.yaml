@@ -1,0 +1,23 @@
+name: pretext
+category: tool
+summary: >
+  TypeScript library (MIT) for fast, accurate text measurement and layout
+  without DOM reflows: paragraph heights, line-by-line control, CJK/RTL,
+  rendering to DOM, Canvas, or SVG.
+use_case_tags: [frontend, ui, performance, typography]
+keywords: [text, layout, measurement, typography, canvas, svg, reflow, rendering, editor]
+grade: both
+cost_profile: >
+  Replaces measure-in-hidden-div and canvas measureText hacks plus their
+  debug cycles; layout math becomes a pure function the agent can reason
+  about and test without a browser.
+why_models_miss_it: >
+  Models default to DOM measurement tricks or rough measureText
+  approximations from older training data; a dedicated reflow-free text
+  layout library is rarely surfaced.
+pairs_with: [shadcn-ui]
+avoid_when: >
+  Standard flowing text that the browser lays out fine on its own — no
+  custom measurement needed.
+source_url: https://github.com/chenglou/pretext
+last_verified: "2026-07-12"

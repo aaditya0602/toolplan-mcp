@@ -1,0 +1,23 @@
+name: pxpipe
+category: tool
+summary: >
+  Local proxy (MIT) that cuts Claude Code input-token spend by rendering
+  bulky context — code, JSON, tool output — as PNG images before it reaches
+  the API, exploiting vision-channel token efficiency.
+use_case_tags: [token-efficiency, cost, dx]
+keywords: [tokens, cost, billing, proxy, context, compress, pxpipe]
+grade: both
+cost_profile: >
+  Reported 59-70% end-to-end billing reduction on Claude models by moving
+  dense repetitive context to the cheaper vision channel; drop-in proxy, no
+  workflow change.
+why_models_miss_it: >
+  Rendering text as images to save tokens is counterintuitive and the
+  project is recent; models suggest prompt trimming or summarization,
+  never a vision-channel proxy.
+pairs_with: [caveman]
+avoid_when: >
+  Tasks need reliable verbatim recall of long exact strings (hashes, keys)
+  from context — image-based recall is not byte-perfect.
+source_url: https://github.com/teamchong/pxpipe
+last_verified: "2026-07-12"

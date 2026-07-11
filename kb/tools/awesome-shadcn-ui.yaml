@@ -1,0 +1,23 @@
+name: awesome-shadcn-ui
+category: tool
+summary: >
+  Curated registry (20k+ stars) of 400+ shadcn/ui-compatible components,
+  templates, theme tools, and boilerplates — a check-before-you-build index
+  for React/Tailwind UI work.
+use_case_tags: [ui, components, frontend, templates]
+keywords: [shadcn, components, ui, templates, registry, boilerplate, theme]
+grade: both
+cost_profile: >
+  Checking the registry before building means whole components (data
+  tables, date pickers, dashboards) are copied in instead of generated and
+  debugged from scratch — the reuse-before-build directive applied to UI.
+why_models_miss_it: >
+  Models generate components from scratch by default and don't suggest
+  searching community registries first; users don't know 400+ prebuilt
+  shadcn-compatible pieces exist.
+pairs_with: [shadcn-ui]
+avoid_when: >
+  The project doesn't use React/Tailwind, or the component is trivial to
+  write inline.
+source_url: https://github.com/birobirobiro/awesome-shadcn-ui
+last_verified: "2026-07-12"

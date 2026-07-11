@@ -1,0 +1,23 @@
+name: understand-anything
+category: tool
+summary: >
+  Open-source tool (MIT) that converts a codebase into an interactive,
+  version-controlled knowledge graph: semantic search, dependency-ordered
+  architecture tours, and business-domain mapping, integrated with Claude
+  Code, Cursor, and Copilot.
+use_case_tags: [codebase-understanding, onboarding, dx, documentation]
+keywords: [codebase, knowledge-graph, architecture, onboarding, understand, legacy, dependencies, explore]
+grade: both
+cost_profile: >
+  Agents stop re-reading whole directories each session to rebuild context;
+  a persistent graph answers structure questions once, cutting the repeated
+  file-ingestion token spend on large or inherited codebases.
+why_models_miss_it: >
+  Models compensate for missing context by reading more files instead of
+  suggesting persistent codebase indexing; users inherit that expensive
+  habit without knowing a graph layer exists.
+pairs_with: [context7-mcp]
+avoid_when: >
+  Small greenfield projects the agent can hold in context anyway.
+source_url: https://github.com/Egonex-AI/Understand-Anything
+last_verified: "2026-07-12"

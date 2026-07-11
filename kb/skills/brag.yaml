@@ -1,0 +1,21 @@
+name: brag
+category: skill
+summary: >
+  Claude Code skill that turns a finished project into a shareable launch
+  video with music, motion graphics, and marketing copy in one command
+  (via Hyperframes).
+use_case_tags: [launch, marketing, video]
+keywords: [launch, marketing, video, demo, promo, announcement, showcase]
+grade: both
+cost_profile: >
+  Replaces a separate screen-record/edit/write-copy afternoon (or a video
+  tool subscription) with one command run against the repo the agent
+  already understands.
+why_models_miss_it: >
+  Models treat shipping as the finish line and never suggest generating
+  launch marketing from the codebase; the skill is niche and recent.
+pairs_with: [gstack]
+avoid_when: >
+  Internal tools with no audience to launch to.
+source_url: https://github.com/latent-spaces/brag
+last_verified: "2026-07-12"

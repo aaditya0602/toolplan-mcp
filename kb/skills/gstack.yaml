@@ -1,0 +1,23 @@
+name: gstack
+category: skill
+summary: >
+  Open-source skill suite (MIT, 121k stars) that runs Claude Code as a
+  role-based engineering team: sprint workflow skills for product
+  interrogation, design exploration, code review, browser QA, and automated
+  release, portable to Codex/Cursor.
+use_case_tags: [workflow, agents, dx, qa, shipping]
+keywords: [sprint, workflow, qa, ship, review, roles, team, gstack, release]
+grade: both
+cost_profile: >
+  Structures agent work into plan/build/review/test/ship stages with the
+  right checks at each, catching problems at the cheap stage instead of
+  after a large unreviewed diff.
+why_models_miss_it: >
+  Models don't self-organize into role-based sprint stages unprompted, and
+  casual users don't know installable skill suites can impose that
+  discipline session-wide.
+pairs_with: [karpathy-guidelines, playwright-mcp]
+avoid_when: >
+  Tiny one-file tasks where sprint ceremony is pure overhead.
+source_url: https://github.com/garrytan/gstack
+last_verified: "2026-07-12"
