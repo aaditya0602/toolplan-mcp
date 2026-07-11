@@ -1,0 +1,14 @@
+name: sample-tool
+category: tool
+summary: >
+  SAMPLE FIXTURE - replaced by real KB. Test-only tool entry used to exercise
+  the loader, matcher, and template against a scraping/dashboard idea.
+use_case_tags: [scraping, dashboard, saas, price-tracking]
+keywords: [scrape, dashboard, price, trends, competitor]
+grade: both
+cost_profile: >
+  Test fixture; not a real cost claim.
+why_models_miss_it: >
+  Test fixture; not a real claim about model behavior.
+source_url: https://example.com/sample-tool
+last_verified: "2026-07-11"

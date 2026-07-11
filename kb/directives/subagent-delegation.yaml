@@ -1,0 +1,20 @@
+name: subagent-delegation
+category: directive
+summary: >
+  Delegate well-specified, mechanical subtasks (CRUD endpoints, format
+  adapters, test scaffolding) to cheaper-tier subagents while a stronger
+  model plans the work up front and reviews the returned diff before
+  integrating it.
+use_case_tags: [universal]
+keywords: [universal]
+grade: both
+cost_profile: >
+  Cheaper-tier subagent tokens cost a fraction of the top-tier model; the
+  strong model spends its budget on planning and review instead of
+  mechanical implementation, cutting total token spend on well-scoped work.
+why_models_miss_it: >
+  Left unprompted, models default to doing every subtask themselves on the
+  same (often expensive) tier rather than routing mechanical work to a
+  cheaper model and reserving the strong model for judgment calls.
+source_url: https://docs.claude.com/en/docs/claude-code/sub-agents
+last_verified: "2026-07-11"
