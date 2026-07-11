@@ -1,0 +1,9 @@
+id: python-ml-api
+idea: >
+  A Python FastAPI backend serving an ML model, with a React frontend and
+  OpenAPI docs.
+grade: industry
+tags: [ml-backend]
+must_include: [fastapi-react, uv]
+must_not_include: []
+notes: fastapi/python/react/openapi/api all hit the fastapi-react stack; "python" hits uv; ml-backend tag reinforces the stack.

@@ -1,0 +1,9 @@
+id: handmade-marketplace
+idea: >
+  A small marketplace where local makers can list handmade goods. I need user
+  login and to send order confirmation emails.
+grade: personal
+tags: []
+must_include: [better-auth, react-email]
+must_not_include: [clerk]
+notes: login hits better-auth; emails hits react-email. clerk also matches login but is industry-only, so grade filter must drop it.

@@ -1,0 +1,9 @@
+id: notion-notes-postgres
+idea: >
+  A personal note-taking app, kind of a mini Notion, that saves notes to a
+  Postgres database.
+grade: personal
+tags: []
+must_include: [drizzle-orm, supabase]
+must_not_include: []
+notes: postgres hits drizzle/supabase (+ postgres/supabase mcps). No stack surfaces since postgres-keyword stacks (nextjs/django) are industry-only.

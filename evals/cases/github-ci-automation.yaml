@@ -1,0 +1,9 @@
+id: github-ci-automation
+idea: >
+  We manage everything through GitHub and want automated CI on pull requests plus
+  issue tracking.
+grade: industry
+tags: []
+must_include: [github-mcp]
+must_not_include: []
+notes: github/ci/pull-request/issues all hit github-mcp.

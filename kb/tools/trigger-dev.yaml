@@ -4,7 +4,7 @@ summary: >
   Open-source background jobs and workflow platform for TypeScript: durable
   long-running tasks, retries, and cron without timeouts.
 use_case_tags: [background-jobs, queue, workflow, backend, async]
-keywords: [trigger, background, jobs, queue, cron, workflow, durable, retry, async]
+keywords: [trigger, background, jobs, queue, cron, workflow, durable, retry, async, schedule, reminder]
 grade: both
 cost_profile: >
   Durable execution, retries, and scheduling come built-in, so the agent

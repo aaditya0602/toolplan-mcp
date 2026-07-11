@@ -1,0 +1,9 @@
+id: python-cli-packaging
+idea: >
+  A small Python command-line tool to organize my downloads folder. I want fast
+  Python packaging and a lockfile.
+grade: personal
+tags: []
+must_include: [uv]
+must_not_include: []
+notes: python/packaging/lockfile hit uv. (fastapi-react stack also surfaces off "python" but is not asserted.)

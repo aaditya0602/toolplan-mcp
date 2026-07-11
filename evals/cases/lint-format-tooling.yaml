@@ -1,0 +1,9 @@
+id: lint-format-tooling
+idea: >
+  We're standardizing our TypeScript tooling and want fast lint and format
+  tooling to replace ESLint and Prettier in CI.
+grade: industry
+tags: []
+must_include: [biome]
+must_not_include: []
+notes: lint/format/eslint/prettier/tooling/ci all hit biome.

@@ -1,0 +1,9 @@
+id: schema-validation-api
+idea: >
+  We need robust schema validation for our API inputs and form data on both
+  client and server.
+grade: industry
+tags: []
+must_include: [zod]
+must_not_include: []
+notes: schema/validation/api/forms/input all hit zod.

@@ -1,0 +1,8 @@
+id: gym-app-vague
+idea: >
+  I want an app for my gym.
+grade: personal
+tags: []
+must_include: [karpathy-guidelines]
+must_not_include: []
+notes: adversarial vague idea; no keyword signal, so no stack is forced. Only universal leverage (headline value prop) should still surface.

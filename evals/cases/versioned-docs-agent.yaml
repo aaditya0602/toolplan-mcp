@@ -1,0 +1,9 @@
+id: versioned-docs-agent
+idea: >
+  Our AI coding agent keeps using outdated library APIs. We want it to always
+  pull correct documentation for the exact versions we use.
+grade: industry
+tags: []
+must_include: [context7-mcp]
+must_not_include: []
+notes: documentation/api/versions hit context7-mcp.

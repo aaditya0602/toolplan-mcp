@@ -1,0 +1,8 @@
+id: postgres-query-tuning
+idea: >
+  Our Postgres is slow. We need help adding indexes and doing performance tuning.
+grade: industry
+tags: []
+must_include: [postgres-mcp]
+must_not_include: []
+notes: postgres/indexes/performance/tuning hit postgres-mcp strongly.

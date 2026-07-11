@@ -1,0 +1,9 @@
+id: reddit-youtube-digest
+idea: >
+  A little bot that pulls trending posts from Reddit and YouTube and saves them
+  for me to read later.
+grade: personal
+tags: []
+must_include: [agent-reach]
+must_not_include: []
+notes: reddit + youtube are agent-reach keywords; no generic scrape/crawl term so only agent-reach surfaces here.

@@ -4,7 +4,7 @@ summary: >
   Next.js App Router + Postgres + Drizzle ORM full-stack TypeScript stack for
   production SaaS.
 use_case_tags: [saas, dashboard, crud, auth, payments, fullstack]
-keywords: [nextjs, next.js, react, postgres, drizzle, typescript, saas, dashboard, vercel]
+keywords: [nextjs, next.js, react, postgres, drizzle, typescript, saas, dashboard, vercel, payments, billing, checkout, stripe, subscription]
 grade: industry
 cost_profile: >
   One language end to end (TS) and a single deploy target (Vercel or a Node

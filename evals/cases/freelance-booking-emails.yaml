@@ -1,0 +1,9 @@
+id: freelance-booking-emails
+idea: >
+  An appointment booking app for my freelance clients, with a calendar and email
+  reminders.
+grade: personal
+tags: []
+must_include: [react-email]
+must_not_include: []
+notes: only "email" maps to a KB keyword (react-email). booking/calendar/scheduling have no KB coverage - relaxed on purpose (keyword gap).

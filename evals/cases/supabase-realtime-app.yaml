@@ -1,0 +1,9 @@
+id: supabase-realtime-app
+idea: >
+  A realtime collaborative app on Supabase for auth, storage, and the backend
+  database.
+grade: industry
+tags: []
+must_include: [supabase, supabase-mcp]
+must_not_include: []
+notes: supabase/realtime/auth/storage/backend hit the supabase tool; "supabase" hits supabase-mcp.

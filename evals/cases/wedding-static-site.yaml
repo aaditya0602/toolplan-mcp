@@ -1,0 +1,9 @@
+id: wedding-static-site
+idea: >
+  A simple static site for my wedding with our story and a photo page. It just
+  needs to look nice and load fast.
+grade: personal
+tags: []
+must_include: [astro-content-site]
+must_not_include: []
+notes: static hits the astro stack; booking/RSVP-style features have no KB keyword so nothing else is asserted.

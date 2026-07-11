@@ -1,0 +1,9 @@
+id: tailwind-component-library
+idea: >
+  We want a consistent React component library using Tailwind and Radix for our
+  design system.
+grade: industry
+tags: []
+must_include: [shadcn-ui]
+must_not_include: []
+notes: react/tailwind/radix/components/design-system all hit shadcn-ui.

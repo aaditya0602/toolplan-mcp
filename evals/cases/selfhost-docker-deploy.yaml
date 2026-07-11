@@ -1,0 +1,9 @@
+id: selfhost-docker-deploy
+idea: >
+  We want to self-host and deploy our Docker app on a VPS instead of using
+  Vercel.
+grade: industry
+tags: []
+must_include: [coolify]
+must_not_include: []
+notes: deploy/docker/vps/self-host all hit coolify.

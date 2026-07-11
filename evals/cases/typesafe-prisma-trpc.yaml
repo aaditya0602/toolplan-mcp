@@ -1,0 +1,9 @@
+id: typesafe-prisma-trpc
+idea: >
+  A fullstack TypeScript app. We'll probably use Prisma and want a typesafe API
+  between the Next.js frontend and backend.
+grade: industry
+tags: []
+must_include: [t3-stack, trpc]
+must_not_include: []
+notes: adversarial "names a default tool (Prisma)"; prisma/nextjs/typescript/typesafe hit t3-stack, typesafe/api/fullstack hit trpc. Nothing breaks.

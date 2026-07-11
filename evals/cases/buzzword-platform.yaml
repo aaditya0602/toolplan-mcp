@@ -1,0 +1,9 @@
+id: buzzword-platform
+idea: >
+  A blazing-fast, AI-powered, cloud-native, web-scale platform that will disrupt
+  the productivity space and delight users.
+grade: personal
+tags: []
+must_include: [ponytail]
+must_not_include: [nextjs-postgres-drizzle-saas]
+notes: adversarial buzzword soup with no real technical signal; only universal leverage should surface, no concrete stack.

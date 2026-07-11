@@ -1,0 +1,8 @@
+id: personal-blog-seo
+idea: >
+  I want to start a personal blog with mostly static content pages and good SEO.
+grade: personal
+tags: []
+must_include: [astro-content-site]
+must_not_include: []
+notes: blog/content/static/seo all hit the astro stack keywords.

@@ -1,0 +1,9 @@
+id: board-game-collection-spa
+idea: >
+  Just a quick hobby prototype, a small React single-page app to track my board
+  game collection.
+grade: personal
+tags: []
+must_include: [vite-react-express-personal]
+must_not_include: [nextjs-postgres-drizzle-saas]
+notes: hobby/prototype/spa/react hit vite stack; nextjs is industry-only so grade filter must drop it despite "react".

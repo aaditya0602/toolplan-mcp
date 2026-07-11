@@ -1,0 +1,8 @@
+id: rails-internal-crm
+idea: >
+  An internal CRM built on Rails with the usual admin screens for our sales team.
+grade: industry
+tags: []
+must_include: [rails-omakase]
+must_not_include: []
+notes: adversarial "names a stack"; "rails" hits rails-omakase, "admin" also nudges django but rails leads.

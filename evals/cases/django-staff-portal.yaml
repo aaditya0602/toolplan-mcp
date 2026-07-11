@@ -1,0 +1,9 @@
+id: django-staff-portal
+idea: >
+  An internal staff portal built with Django, using the built-in admin, Postgres,
+  and login for staff.
+grade: industry
+tags: []
+must_include: [django-batteries-included]
+must_not_include: []
+notes: django/admin/postgres hit the django stack strongly.

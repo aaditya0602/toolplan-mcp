@@ -1,0 +1,9 @@
+id: scraper-price-tracker
+idea: >
+  I want an app that watches my competitors' pricing pages, scrapes them once a
+  day, and emails me whenever a price changes.
+grade: personal
+tags: []
+must_include: [crawl4ai, react-email]
+must_not_include: []
+notes: scrapes hits crawl4ai/agent-reach/firecrawl; emails hits react-email.

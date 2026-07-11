@@ -1,0 +1,9 @@
+id: playwright-flow-tests
+idea: >
+  I keep breaking my own site. I want Playwright browser tests for end-to-end
+  (e2e) checks of my main flows.
+grade: personal
+tags: []
+must_include: [playwright, playwright-mcp]
+must_not_include: []
+notes: adversarial "names a tool"; playwright/browser/e2e hit both the playwright tool and playwright-mcp.

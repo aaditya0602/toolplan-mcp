@@ -1,0 +1,9 @@
+id: recipe-crud-forms
+idea: >
+  A simple personal app to store and edit my recipes, just basic CRUD with a few
+  forms.
+grade: personal
+tags: [crud]
+must_include: [sveltekit-lean-app, zod]
+must_not_include: []
+notes: forms hits sveltekit stack + zod; crud tag boosts personal-eligible fullstack stacks.

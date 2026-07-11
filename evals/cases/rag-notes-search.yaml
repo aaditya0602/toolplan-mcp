@@ -1,0 +1,9 @@
+id: rag-notes-search
+idea: >
+  I want to scrape a bunch of articles, convert them to markdown, and build a
+  little RAG search over my own notes.
+grade: personal
+tags: []
+must_include: [crawl4ai, firecrawl-mcp]
+must_not_include: []
+notes: scrape/markdown/rag hit crawl4ai strongly; scrape/markdown hit firecrawl-mcp.

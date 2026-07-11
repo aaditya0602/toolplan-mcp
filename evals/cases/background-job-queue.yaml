@@ -1,0 +1,9 @@
+id: background-job-queue
+idea: >
+  Our app needs a reliable background job queue with cron scheduling for async
+  workflows.
+grade: industry
+tags: []
+must_include: [trigger-dev]
+must_not_include: []
+notes: background/jobs/queue/cron/async/workflows all hit trigger-dev.

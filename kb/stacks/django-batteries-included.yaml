@@ -4,7 +4,7 @@ summary: >
   Django with its built-in ORM, admin, auth, and migrations for data-heavy web
   apps.
 use_case_tags: [crud, saas, dashboard, auth, admin, fullstack]
-keywords: [django, python, orm, admin, postgres, auth, backend]
+keywords: [django, python, orm, admin, postgres, auth, backend, booking, appointment]
 grade: industry
 cost_profile: >
   The built-in admin and auth remove whole feature builds; the agent

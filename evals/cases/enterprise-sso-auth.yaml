@@ -1,0 +1,9 @@
+id: enterprise-sso-auth
+idea: >
+  A B2B product needing SSO, organizations, 2FA, and OAuth login for our
+  enterprise customers.
+grade: industry
+tags: [security]
+must_include: [better-auth, clerk]
+must_not_include: []
+notes: sso/2fa/oauth/login hit better-auth; organizations/login hit clerk (industry-eligible here); security tag boosts both.

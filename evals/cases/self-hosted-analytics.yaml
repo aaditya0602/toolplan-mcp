@@ -1,0 +1,9 @@
+id: self-hosted-analytics
+idea: >
+  I run a small website and want privacy-friendly, self-hosted analytics instead
+  of Google Analytics.
+grade: personal
+tags: []
+must_include: [plausible, umami]
+must_not_include: []
+notes: analytics/privacy/self-host hit both plausible and umami.

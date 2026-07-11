@@ -4,7 +4,7 @@ summary: >
   Ruby on Rails convention-over-configuration stack with Hotwire for server-
   rendered interactivity.
 use_case_tags: [crud, saas, dashboard, auth, fullstack]
-keywords: [rails, ruby, hotwire, turbo, activerecord, backend, saas]
+keywords: [rails, ruby, hotwire, turbo, activerecord, backend, saas, booking, appointment]
 grade: industry
 cost_profile: >
   Strong conventions mean the agent makes fewer arbitrary structure decisions

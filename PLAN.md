@@ -56,6 +56,10 @@ Evergreen cost directives (plan-first, subagent tiers, task structure) live
 in static templates — they don't need scraping.
 
 ## Phases
+Status 2026-07-12: Phases 0–1 built (server, 48-entry KB, 30-case eval
+suite at 100%, smoke-tested over stdio). Next: Phase 2 release polish,
+Phase 3 refresh pipeline.
+
 ### Phase 0 — Evals (before any code)
 - 30–50 real idea-prompts, each with expert-judged expected output
   (stack, tools, directives).
