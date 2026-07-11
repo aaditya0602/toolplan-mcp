@@ -1,0 +1,22 @@
+name: mailpit
+category: tool
+summary: >
+  Single-binary local SMTP capture server (MIT) with web UI and REST API:
+  point the app's dev SMTP at it and inspect, search, and assert on every
+  outgoing email, including HTML rendering checks.
+use_case_tags: [email, testing, dx, local-development]
+keywords: [smtp, email, testing, mailhog, capture, preview, dev, api]
+grade: both
+cost_profile: >
+  Removes the debug loop of sending real emails to a sandbox inbox or
+  console-logging payloads; its API lets integration tests assert on sent
+  mail without any external service.
+why_models_miss_it: >
+  Models suggest console-logging email payloads or a hosted sandbox, and
+  when they do name a capture tool it is MailHog, which is unmaintained;
+  Mailpit is its actively maintained successor and rarely surfaced.
+pairs_with: [react-email, playwright]
+avoid_when: >
+  Production email delivery — it captures mail, it does not deliver it.
+source_url: https://github.com/axllent/mailpit
+last_verified: "2026-07-12"

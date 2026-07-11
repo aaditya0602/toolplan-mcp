@@ -1,0 +1,99 @@
+# Discovery sources for the weekly KB refresh (see pipeline/REFRESH.md).
+# All URLs verified reachable 2026-07-12. If one dies, replace it and note
+# the swap in that week's PROPOSAL.md.
+#
+# Per source: name, url, look_for (what qualifies as a candidate),
+# queries (search strings / fetch patterns to use).
+
+sources:
+  - name: github-trending-typescript
+    url: https://github.com/trending/typescript?since=weekly
+    look_for: >
+      Web-app dev tools, libraries, and agent tooling gaining stars this week.
+      Skip anything trending purely off a launch post with no releases yet.
+    queries:
+      - "WebFetch the URL; extract repo names + descriptions; keep web-app-relevant ones"
+
+  - name: github-trending-python
+    url: https://github.com/trending/python?since=weekly
+    look_for: >
+      Backend/web tooling (FastAPI/Django ecosystem, scraping-for-web-apps,
+      testing, deployment). Same launch-hype filter as above.
+    queries:
+      - "WebFetch the URL; extract repo names + descriptions"
+
+  - name: mcp-official-servers
+    url: https://github.com/modelcontextprotocol/servers
+    look_for: >
+      New reference or community MCP servers useful during web-app builds
+      (DBs, browsers, docs, deployment). Check the community list section.
+    queries:
+      - "WebFetch the README; list servers added or changed recently"
+
+  - name: pulsemcp-directory
+    url: https://www.pulsemcp.com/servers
+    look_for: >
+      MCP directory (21k+ servers) sortable by Recently Released / Popular
+      This Week. Prefer servers with an official-provider badge or real
+      weekly-visitor numbers. (mcp.so exists but blocks automated fetch —
+      browse it manually if needed; PulseMCP is the scriptable equivalent.)
+    queries:
+      - "WebFetch https://www.pulsemcp.com/servers?sort=newest"
+      - "WebSearch: site:pulsemcp.com <capability> mcp server"
+
+  - name: hn-show
+    url: https://news.ycombinator.com/show
+    look_for: >
+      Show HN posts for OSS dev tools with real discussion (>20 comments is a
+      decent adoption signal; a 3-point launch post is not).
+    queries:
+      - "WebFetch the URL; list posts; for interesting ones fetch the comment thread"
+      - "WebSearch: site:news.ycombinator.com Show HN <topic>"
+
+  - name: reddit-claudecode
+    url: https://www.reddit.com/r/ClaudeCode/
+    look_for: >
+      Tools/skills/MCPs users report actually saving time or tokens.
+      Weight posts with corroborating comments, not self-promotion.
+    queries:
+      - 'agent-reach search reddit "underrated tool" --sub ClaudeCode   # if Agent-Reach installed'
+      - "WebSearch: reddit r/ClaudeCode <tool type> recommendation"
+
+  - name: reddit-claudeai
+    url: https://www.reddit.com/r/ClaudeAI/
+    look_for: >
+      Same as r/ClaudeCode; broader audience, more hype — filter harder.
+    queries:
+      - "WebSearch: reddit r/ClaudeAI best mcp servers OR skills"
+
+  - name: reddit-localllama
+    url: https://www.reddit.com/r/LocalLLaMA/
+    look_for: >
+      Tooling threads only (ignore model releases): agent tooling, scrapers,
+      eval harnesses usable in web-app projects.
+    queries:
+      - "WebSearch: reddit r/LocalLLaMA tooling thread <topic>"
+
+  - name: awesome-claude-code
+    url: https://github.com/hesreallyhim/awesome-claude-code
+    look_for: >
+      Newly added skills/plugins/MCP entries (diff against last week via
+      commit history). Curated, so lower hype risk than Reddit.
+    queries:
+      - "WebFetch the README; also fetch /commits/main to see what was added recently"
+
+  - name: anthropic-skills-repo
+    url: https://github.com/anthropics/skills
+    look_for: >
+      New official skills relevant to web-app work (testing, docs, artifacts).
+    queries:
+      - "WebFetch the README; list skills; check commit history for new ones"
+
+  - name: bestofjs-weekly
+    url: https://bestofjs.org/projects?sort=weekly
+    look_for: >
+      JS/TS ecosystem projects by weekly stars gained — the closest thing to
+      "npm trending" (npmjs.com has no trending page). Good for spotting
+      web-tooling momentum beyond GitHub's front page.
+    queries:
+      - "WebFetch the URL; extract top projects + descriptions"

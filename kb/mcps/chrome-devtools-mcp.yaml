@@ -1,0 +1,24 @@
+name: chrome-devtools-mcp
+category: mcp
+summary: >
+  Google-maintained MCP server that gives agents a live Chrome instance
+  with DevTools access: performance traces, network and console
+  inspection, DOM/input automation, and heap snapshots (60+ tools).
+use_case_tags: [debugging, performance, frontend, browser]
+keywords: [chrome, devtools, debug, performance, trace, network, console, browser, lighthouse, mcp]
+grade: both
+cost_profile: >
+  Cuts frontend debug loops from guess-edit-ask-user cycles to one tool
+  call: the agent reads the real console error, network response, or
+  performance trace instead of reasoning blind from source code.
+why_models_miss_it: >
+  Released after most models' training saturation, so agents default to
+  debugging frontends by re-reading code or writing throwaway Playwright
+  scripts; they don't know an official DevTools bridge exists for
+  performance and network-level inspection.
+pairs_with: [playwright-mcp]
+avoid_when: >
+  Writing repeatable CI end-to-end tests — use Playwright there; this is
+  for interactive debugging and performance work.
+source_url: https://github.com/ChromeDevTools/chrome-devtools-mcp
+last_verified: "2026-07-12"

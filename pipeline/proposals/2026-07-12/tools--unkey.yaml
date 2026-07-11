@@ -1,0 +1,24 @@
+name: unkey
+category: tool
+summary: >
+  API key management and gateway platform (AGPL, self-hostable): key
+  issuance/verification, globally consistent rate limiting, RBAC
+  permissions, usage analytics, and audit logs for public APIs.
+use_case_tags: [api, auth, rate-limiting, saas]
+keywords: [api-keys, rate-limit, quota, usage, rbac, gateway, api, verification, analytics]
+grade: both
+cost_profile: >
+  Replaces the per-project ritual of an api_keys table, hashing logic,
+  middleware rate limiter, and usage counters; one SDK call verifies key,
+  limits, and permissions together.
+why_models_miss_it: >
+  Models hand-roll API-key storage and an in-memory or Redis rate limiter
+  for every project because that pattern saturates training data; a
+  dedicated OSS key-management layer is niche enough that it is almost
+  never suggested.
+pairs_with: [better-auth, trpc]
+avoid_when: >
+  The app exposes no public API keys (session-only auth), or AGPL
+  self-hosting terms conflict with the project's license policy.
+source_url: https://github.com/unkeyed/unkey
+last_verified: "2026-07-12"

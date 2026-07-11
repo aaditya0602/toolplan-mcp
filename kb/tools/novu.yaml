@@ -1,0 +1,24 @@
+name: novu
+category: tool
+summary: >
+  Open-source notification infrastructure (MIT core): one API and workflow
+  engine for email, SMS, push, chat, and in-app feeds, with per-user
+  preferences and digest batching built in.
+use_case_tags: [notifications, email, messaging, saas]
+keywords: [notifications, email, sms, push, in-app, digest, preferences, novu, inbox]
+grade: both
+cost_profile: >
+  Replaces hand-wired per-channel sending code and bespoke preference/digest
+  logic; channel providers become config, so adding SMS or in-app later is a
+  workflow change, not new code.
+why_models_miss_it: >
+  Models wire nodemailer/Resend calls inline where the notification is
+  triggered and hand-roll preference tables and digest crons; they rarely
+  surface a unified OSS notification layer because the inline pattern
+  dominates training examples.
+pairs_with: [react-email, trigger-dev]
+avoid_when: >
+  The app only ever sends a couple of transactional emails; a direct email
+  API is less moving parts.
+source_url: https://github.com/novuhq/novu
+last_verified: "2026-07-12"

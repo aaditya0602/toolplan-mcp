@@ -1,0 +1,10 @@
+id: frontend-perf-debug
+idea: >
+  Our React checkout page is slow and sometimes the console shows errors we
+  can't reproduce. I want an agent that can debug the performance and network
+  issues in a real browser.
+grade: industry
+tags: []
+must_include: [chrome-devtools-mcp]
+must_not_include: []
+notes: debug/performance/console/network/browser keywords hit chrome-devtools-mcp (2026-07-12 refresh entry).

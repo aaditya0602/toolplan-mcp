@@ -1,0 +1,9 @@
+id: public-api-keys
+idea: >
+  We're opening a public API for our data product. Customers get API keys,
+  and we need rate limits and usage analytics per key.
+grade: industry
+tags: []
+must_include: [unkey]
+must_not_include: []
+notes: api/rate-limit/usage keywords should surface unkey (2026-07-12 refresh entry).
