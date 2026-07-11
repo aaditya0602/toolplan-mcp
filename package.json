@@ -18,11 +18,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aaditya062025S/toolplan-mcp.git"
+    "url": "git+https://github.com/aaditya0602/toolplan-mcp.git"
   },
-  "homepage": "https://github.com/aaditya062025S/toolplan-mcp",
+  "homepage": "https://github.com/aaditya0602/toolplan-mcp",
   "bugs": {
-    "url": "https://github.com/aaditya062025S/toolplan-mcp/issues"
+    "url": "https://github.com/aaditya0602/toolplan-mcp/issues"
   },
   "files": [
     "dist",
